@@ -16,8 +16,8 @@ const posts: PostType[] = [
     },
     content: [
       { type: 'paragraph', content: 'Hey guys 👋' },
-      { type: 'paragraph', content: 'I have just uploaded another project to my portifa. Its a project I did at NLW Return, a Rocketseat event. The name of the project is DoctorCare 🚀' },
-      { type: 'link', content: 'jane.design/doctorcare' },
+      { type: 'paragraph', content: 'I have just uploaded a browser application to test its functionality. Go to the website link. 🚀' },
+      { type: 'link', content: '2all.design/sunweb' },
     ],
     publishedAt: new Date('2024-09-30 20:00:00'),
   },
@@ -30,8 +30,8 @@ const posts: PostType[] = [
     },
     content: [
       { type: 'paragraph', content: 'Hey guys 👋' },
-      { type: 'paragraph', content: 'I have just uploaded another project to my portifa. Its a project I did at NLW Return, a Rocketseat event. The name of the project is DoctorCare 🚀' },
-      { type: 'link', content: 'jane.design/doctorcare' },
+      { type: 'paragraph', content: 'I have just uploaded a mobile app to test its functionality. Go to the project link. 🚀' },
+      { type: 'link', content: '2all.design/sunapp' },
     ],
     publishedAt: new Date('2024-09-30 20:00:00'),
   },
