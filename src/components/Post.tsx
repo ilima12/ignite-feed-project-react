@@ -6,6 +6,7 @@ import { Avatar } from './Avatar';
 import { Comment } from './Comment';
 
 import styles from './Post.module.css';
+import { enUS } from 'date-fns/locale';
 
 interface Author {
   name: string;
@@ -31,17 +32,17 @@ interface PostProps {
 
 export function Post({ post }: PostProps) {
   const [comments, setComments] = useState([
-    'Post muito bacana, hein?!'
+    'Very nice post!!!'
   ]);
 
   const [newCommentText, setNewCommentText] = useState('');
 
   const publishedDateFormatted = format(post.publishedAt, "d 'de' LLLL 'às' HH:mm'h'", {
-    locale: ptBR,
+    locale: enUS,
   });
 
   const publishedDateRelativeToNow = formatDistanceToNow(post.publishedAt, {
-    locale: ptBR,
+    locale: enUS,
     addSuffix: true
   });
 
@@ -58,7 +59,7 @@ export function Post({ post }: PostProps) {
   }
 
   function handleNewCommentInvalid(event: InvalidEvent<HTMLTextAreaElement>) {
-    event.target.setCustomValidity('Esse campo é obrigatório!');
+    event.target.setCustomValidity('This field is required!');
   }
 
   function deleteComment(commentToDelete: string) {
@@ -98,11 +99,11 @@ export function Post({ post }: PostProps) {
       </div>
 
       <form onSubmit={handleCrateNewComment} className={styles.commentForm}>
-        <strong>Deixe seu feedback</strong>
+        <strong>Leave your feedback</strong>
 
         <textarea
           name="comment"
-          placeholder="Deixe um comentário"
+          placeholder="Leave a comment"
           value={newCommentText}
           onChange={handleNewCommentChange}
           onInvalid={handleNewCommentInvalid}
@@ -111,7 +112,7 @@ export function Post({ post }: PostProps) {
 
         <footer>
           <button type="submit" disabled={isNewCommentEmpty}>
-            Publicar
+          Publish
           </button>
         </footer>
       </form>

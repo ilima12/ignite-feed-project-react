@@ -12,16 +12,16 @@ export function Sidebar() {
       />
 
       <div className={styles.profile}>
-        <Avatar src="https://github.com/maykbrito.png" />
+        <Avatar src="https://github.com/ilima12.png" />
 
-        <strong>Diego Fernandes</strong>
+        <strong>Italo Lima</strong>
         <span>Web Developer</span>
       </div>
 
       <footer>
         <a href="#">
           <PencilLine size={20} />
-          Editar seu perfil
+          Edit your profile
         </a>
       </footer>
     </aside>
